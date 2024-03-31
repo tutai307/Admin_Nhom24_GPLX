@@ -1,12 +1,12 @@
-<?php
+<!-- <?php
 
 //Google Code
 require_once('../../common/google/libraries/Google/autoload.php');
 
 //Insert your cient ID and secret 
 //You can get it from : https://console.developers.google.com/
-$client_id = '580658770293-huo1e7l6pq267vhd73cqljki6ja94t8m.apps.googleusercontent.com';
-$client_secret = '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';
+// $client_id = '580658770293-huo1e7l6pq267vhd73cqljki6ja94t8m.apps.googleusercontent.com';
+// $client_secret = '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';
 $redirect_uri = 'http://localhost/Group11_PHP/user/userCommon/UserLoginSignUp.php';
 
 //incase of logout request, just unset the session var
@@ -137,4 +137,4 @@ if ($client->isAccessTokenExpired()) {
     //            header('Location: ' . filter_var($authUrl, FILTER_SANITIZE_URL));
 }
 
-//End Google Code
+//End Google Code -->
