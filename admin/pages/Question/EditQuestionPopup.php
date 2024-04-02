@@ -8,7 +8,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <table border="1" width="100%" padding="10px" style="border-collapse: collapse;">
+                    <table border="1" width="100%" padding="10px" style="border-collapse: collapse;">
                         <tr>
                             <td class="row">
                                 <div class="mb-2 col">
@@ -59,20 +59,36 @@
                             <td class="row flex justify-between">
                                 <div class="mb-2 col-4">
                                     <label for="transferFee" class="form-label">Đáp án đúng</label>
+                                    <?php echo $row['trueAnswer'] ?>
                                     <select name="trueAnswer" class="form-select" aria-label="Default select example">
-                                        <option value="1">Đáp án 1</option>
-                                        <option value="2">Đáp án 2</option>
-                                        <option value="3">Đáp án 3</option>
-                                        <option value="4">Đáp án 4</option>
+                                        <?php
+                                        for ($j = 1; $j <= 4; $j++) {
+                                            if ($j != $row['trueAnswer']) {
+                                                echo "<option value=\"$j\">Đáp án $j</option>";
+                                            } else {
+                                                echo "<option value=\"$j\" selected>Đáp án $j</option>";
+                                            }
+                                        }
+                                        ?>
                                     </select>
+
+
                                 </div>
 
                                 <div class="mb-2 col-3 ">
                                     <label for="description" class="form-label">Câu hỏi điểm liệt</label>
                                     <select name="isDanger" class="form-select" aria-label="Default select example">
-                                        <option selected value="0">Không</option>
-                                        <option value="1">Có</option>
+                                        <?php
+                                        if ($row['isDanger'] == 0) {
+                                            echo "<option selected value='0'>Không</option>";
+                                            echo "<option value='1'>Có</option>";
+                                        } else {
+                                            echo "<option value='0'>Không</option>";
+                                            echo "<option selected value='1'>Có</option>";
+                                        }
+                                        ?>
                                     </select>
+
                                 </div>
                             </td>
                         </tr>

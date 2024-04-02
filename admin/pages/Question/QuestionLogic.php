@@ -29,7 +29,7 @@ if (isset($_POST['addQuestion'])) {
     $option_3 = $_POST['option_3'];
     $option_4 = $_POST['option_4'];
     $trueAnswer = intval($_POST['trueAnswer']);
-    $isDanger = isset($_POST['isDanger']) ? 0 : 1;
+    $isDanger = $_POST['isDanger'];
     $questionId = generateUuid();
 
     $add = "INSERT INTO tbl_question(id,code,questionImage,title,chapterId,option_1,option_2,option_3,option_4,trueAnswer,isDanger) 
@@ -46,7 +46,7 @@ if (isset($_POST['addQuestion'])) {
     $option_3 = $_POST['option_3'];
     $option_4 = $_POST['option_4'];
     $trueAnswer = intval($_POST['trueAnswer']);
-    $isDanger = isset($_POST['isDanger']) ? 0 : 1;
+    $isDanger = $_POST['isDanger'];
 
     echo $title . "<br>";
     echo $image . "<br>";
