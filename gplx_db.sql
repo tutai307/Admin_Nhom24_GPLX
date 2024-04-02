@@ -1,32 +1,7 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 02, 2024 at 07:42 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+drop database if exists gplx_db;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `gplx_db`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_chapter`
---
-
+create database gplx_db;
+use gplx_db;
 CREATE TABLE `tbl_chapter` (
   `id` varchar(36) NOT NULL,
   `code` varchar(255) DEFAULT NULL,
