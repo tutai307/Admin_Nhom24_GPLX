@@ -26,11 +26,15 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `tbl_chapter`
 --
+<<<<<<< HEAD
 drop database if exists gplx_db;
 
 create database gplx_db;
 use gplx_db;
 
+=======
+
+>>>>>>> edc6d8472138f67fbb74ed994e238fa697992148
 CREATE TABLE `tbl_chapter` (
   `id` varchar(36) NOT NULL,
   `code` varchar(255) DEFAULT NULL,
